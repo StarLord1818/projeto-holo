@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+
+/* CORES PRINCIPAIS */
+    --Dark-Wood: #2B180F;
+    --Deep-Brown: #422719;
+    --Leather-Brown: #70452D;
+    --Warm-Brown: #986744;
+
+/* COR FUNDOS */
+    --Dark-Parchment: #CBA77C;
+    --Parchment: #E8CBA2;
+    --Light-Cream: #F2DFC0;
+    --Soft-Ivory: #F8ECD8;
+
+/* DETALHES E DESTAQUES */
+    --Antique-Gold: #C99A50;
+    --Wheat-Gold: #E2B96F;
+    --Muted-Red: #963F32;
+    --Olive-Green: #777347;
+
+/* FONTES */
+    --Titulos: 'Cinzel Decorative', serif;
+    --Textos: 'Cormorant Garamond', serif;
+    --Textos2: 'Cardo', serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+h1 {
+    font-family: var(--Titulos);
+    color: white;
+
+}
+span {
+    color: white;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+header {
+    background-color: #5c3623;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row-reverse ;
+    padding: 20px;
+}
+header a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+header a:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-color: white;
+}
+nav {
+    display: none;
+}
+nav ul{
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+
