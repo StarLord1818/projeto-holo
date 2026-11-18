@@ -192,8 +192,18 @@ h2 {
     padding: 10px;
     margin-bottom: 10px;
     font-size: 1.6em;
+    font-weight: 530;
+    font-family: var(--Textos2);
+    color: var(--Leather-Brown);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
     background-color: var(--Parchment);
-    
+}
+#setahero {
+    color: var(--Leather-Brown);
 }
 /* #botaohero::after {
     content:  '➛';
