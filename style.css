@@ -40,7 +40,6 @@
 body {
     width: 100%;
     overflow-x: clip;
-    /* overflow-x: hidden; */
 }
 body.menu-open {
     overflow: hidden;
@@ -78,11 +77,16 @@ nav {
     
 }
 .menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
     color: #F8ECD8;
     text-decoration: none;
     transition: 0.3s;
     padding: 15px;
     
+    border-radius: 10px;
 }
 .menu:hover {
     /* opacity: .7; */
@@ -103,8 +107,8 @@ nav {
 .nav-list li {
     letter-spacing: 2px;
     margin-left: 32px;
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
 }
 
 .nav-list .menu {
@@ -153,13 +157,30 @@ h1 {
     justify-content: flex-end;
     align-items: center;
     background-image:linear-gradient(to bottom,
-    transparent 20%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo11.jpg");
-    background-position: 70% 10%;
-    background-repeat: no-repeat;
-    
+    transparent 10%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo11.jpg");
+    /* background-position: 70% 10%;
+    background-repeat: no-repeat; */
+    background-size: 139%;
+    background-attachment: fixed;
+    background-position: 70% top;
     color: #a75f08;
 }
-p {
+h2 {
+    font-family: var(--Titulos);
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--Deep-Brown);
+    font-weight: bolder;
+}
+#textopersonagem {
+    color: #422719;
+    font-family: var(--Textos2);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 550;
+}
+#textohero {
     width: 80%;
     margin: 20px 0px;
     font-size: 20px;
@@ -167,13 +188,25 @@ p {
     font-weight: 500;
     color: var(--Light-Cream);
 }
+#botaohero {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1.6em;
+    background-color: var(--Parchment);
+    
+}
+/* #botaohero::after {
+    content:  '➛';
+    padding-left: 10px;
+    font-size: 1em;
+} */
 .ornamento {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
     width: 300px;
-    margin: 5px auto 50px auto;
+    margin: 5px auto 10px auto;
 }
 
 .ornamento::before,
@@ -213,7 +246,7 @@ p {
 
 }
 .card::scroll-marker:target-current {
-    background-color: purple;
+    background-color: var(--Muted-Red);
 }
 .carousel::-webkit-scrollbar {
     display: none;
@@ -246,6 +279,7 @@ p {
 .card {
     scroll-snap-align: start;
     flex: 0 0 20em;
+    
     aspect-ratio: 5 / 3;
     background-color: #a75f08;
     padding: 1em;
