@@ -161,6 +161,7 @@ p {
 }
 main {
     background-color: var(--Light-Cream);
+    height: 900px;
 }
 /* TABLETS E CELULARES */
 @media (max-width: 992px) {
