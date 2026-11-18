@@ -18,6 +18,7 @@ class MobileNavbar {
     handleClick() {
         this.navList.classList.toggle(this.activeClass);
         this.mobileMenu.classList.toggle(this.activeClass);
+        document.body.classList.toggle("menu-open");
         this.animateLinks()
         this.mobileMenu.setAttribute(
     "aria-expanded",
