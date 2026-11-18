@@ -153,9 +153,10 @@ h1 {
     justify-content: flex-end;
     align-items: center;
     background-image:linear-gradient(to bottom,
-    transparent 10%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo11.jpg");
-    background-position: 40% 10%;
+    transparent 20%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo11.jpg");
+    background-position: 70% 10%;
     background-repeat: no-repeat;
+    
     color: #a75f08;
 }
 p {
@@ -172,7 +173,7 @@ p {
     justify-content: center;
     gap: 12px;
     width: 300px;
-    margin: 10px auto;
+    margin: 5px auto 50px auto;
 }
 
 .ornamento::before,
