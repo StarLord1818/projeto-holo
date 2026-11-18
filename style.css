@@ -162,7 +162,7 @@ h1 {
     justify-content: flex-end;
     align-items: center;
     background-image:linear-gradient(to bottom,
-    transparent 20%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo11.jpg");
+    transparent 10%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo11.jpg");
     background-position: 50% 20%;
     background-size: cover;
     color: #a75f08;
