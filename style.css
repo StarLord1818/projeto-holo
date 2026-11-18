@@ -38,7 +38,9 @@
 }
 
 body {
-    overflow-x: hidden;
+    width: 100%;
+    overflow-x: clip;
+    /* overflow-x: hidden; */
 }
 nav {
     display: flex;
@@ -191,9 +193,10 @@ main {
         order: 1;
     }
 
-    .nav-list {
-    position: absolute;
-    top: 100%;
+   .nav-list {
+    position: fixed;
+
+    top: 65px;
     right: 0;
 
     width: min(75vw, 320px);
