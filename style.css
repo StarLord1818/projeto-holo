@@ -141,7 +141,18 @@ h1 {
     text-transform: uppercase;
     font-family: var(--Titulos);
     font-size: 3em;
-    color: #E2B96F;
+    background: linear-gradient(
+        to bottom,
+        #F8ECD8 0%,
+        #E2B96F 45%,
+        #C99A50 75%,
+        #70452D 100%
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
 }
 #hero {
     text-align: center;
@@ -151,8 +162,9 @@ h1 {
     justify-content: flex-end;
     align-items: center;
     background-image:linear-gradient(to bottom,
-    transparent 50%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo1.jpg");
-    background-position: 60% 100%;
+    transparent 20%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo11.jpg");
+    background-position: 50% 20%;
+    background-size: cover;
     color: #a75f08;
 }
 p {
@@ -160,6 +172,7 @@ p {
     margin: 20px 0px;
     font-size: 20px;
     font-family: var(--Textos2);
+    color: var(--Light-Cream);
 }
 main {
     background-color: var(--Light-Cream);
