@@ -316,29 +316,114 @@ h2 {
     text-align: center;
     align-content: center;
 }
-#card1 {
-   background-image:linear-gradient(to bottom,
-    transparent 40%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo18.jpg");
+#cardholo {
+    background-image:linear-gradient(to bottom,
+    transparent 40%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo19.jpg");
     background-size: 100%;
-    background-position: 50% 40% ;
-    /* background-size: 100%;
-    background-position: 50% 30% ; */
+    background-position: 50% 95% ;
     background-repeat: no-repeat;
 }
-#card1 h3 {
+#cardholo h3 {
     font-size: 1.9em;
     margin-top: 150px;
     font-family: var(--Titulos);
     color: var(--Parchment);
 }
-#card1 p {
+#cardholo a {
     font-size: 1.4em;
     color: var(--Parchment);
     font-family: var(--Textos2);
 }
+#cardlawrence {
+    background-image:linear-gradient(to bottom,
+    transparent 20%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/lawrence1.jpg");
+    background-size: 100%;
+    background-position: 90% 70%;
+}
+#cardlawrence h3 {
+    font-size: 1.9em;
+    margin-top: 150px;
+    font-family: var(--Titulos);
+    color: var(--Parchment);
+}
+#cardlawrence a {
+    font-size: 1.4em;
+    color: var(--Parchment);
+    font-family: var(--Textos2);
+}
+#cardnora {
+    background-image:linear-gradient(to bottom,
+    transparent 20%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/nora1.jpg");
+    background-size: 100%;
+    background-position: 50% 50% ;
+}
+#cardnora h3 {
+    font-size: 1.9em;
+    margin-top: 150px;
+    font-family: var(--Titulos);
+    color: var(--Parchment);
+}
+#cardnora a {
+    font-size: 1.4em;
+    color: var(--Parchment);
+    font-family: var(--Textos2);
+}
+#carddian {
+    background-image:linear-gradient(to bottom,
+    transparent 30%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/dian3.jpg");
+    background-size: 100%;
+    background-position: 50% 55% ;
+}
+#carddian h3 {
+    font-size: 1.9em;
+    margin-top: 150px;
+    font-family: var(--Titulos);
+    color: var(--Parchment);
+}
+#carddian a {
+    font-size: 1.4em;
+    color: var(--Parchment);
+    font-family: var(--Textos2);
+}
+#cardmarlheit {
+    background-image:linear-gradient(to bottom,
+    transparent 10%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/marlheit1.jpg");
+    background-size: 100%;
+    background-position: 50% 55% ;
+}
+#cardmarlheit h3 {
+    font-size: 1.9em;
+    margin-top: 150px;
+    font-family: var(--Titulos);
+    color: var(--Parchment);
+}
+#cardmarlheit a {
+    font-size: 1.4em;
+    color: var(--Parchment);
+    font-family: var(--Textos2);
+}
+#simbolo {
+      color: var(--Parchment);
+}
 main {
     background-color: var(--Light-Cream);
     height: 1200px;
+}
+
+.personagem-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    font-family: var(--Textos2);
+    font-size: 1.1em;
+    color: var(--Deep-Brown);
+    text-decoration: none;
+}
+.icone-personagem {
+    font-size: 24px;
+    color: var(--Deep-Brown);
 }
 @media (max-width: 500px){
     .card {
