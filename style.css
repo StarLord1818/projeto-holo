@@ -172,8 +172,6 @@ h1 {
     align-items: center;
     background-image:linear-gradient(to bottom,
     transparent 10%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo11.jpg");
-    /* background-position: 70% 10%;
-    background-repeat: no-repeat; */
     background-size: 190.4%;
     background-attachment: fixed;
     background-position: 60% top;
@@ -221,11 +219,6 @@ h2 {
 #setahero {
     color: var(--Leather-Brown);
 }
-/* #botaohero::after {
-    content:  '➛';
-    padding-left: 10px;
-    font-size: 1em;
-} */
  .icone-cta {
     font-size: 28px;
     line-height: 1;
@@ -425,6 +418,40 @@ main {
     font-size: 24px;
     color: var(--Deep-Brown);
 }
+
+
+
+main {
+    background-color: var(--Parchment);
+    height: 1200px;
+}
+
+.personagens {
+    position: relative;
+    background-color: var(--Light-Cream);
+    padding: 35px 0;
+    margin: 25px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 500px){
     .card {
         flex: 0 0 100%;

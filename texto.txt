@@ -1,37 +1,771 @@
+
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,0..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    /* CORES PRINCIPAIS */
+    --Dark-Wood: #2B180F;
+    --Deep-Brown: #422719;
+    --Leather-Brown: #70452D;
+    --Warm-Brown: #986744;
+
+    /* FUNDOS */
+    --Dark-Parchment: #CBA77C;
+    --Parchment: #E8CBA2;
+    --Light-Cream: #F2DFC0;
+    --Soft-Ivory: #F8ECD8;
+
+    /* DETALHES */
+    --Antique-Gold: #C99A50;
+    --Wheat-Gold: #E2B96F;
+    --Muted-Red: #963F32;
+    --Olive-Green: #777347;
+
+    /* FONTES */
+    --Titulos: 'Cinzel Decorative', serif;
+    --Textos: 'Cormorant Garamond', serif;
+    --Textos2: 'Cardo', serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    overflow-x: clip;
+}
+body.menu-open {
+    overflow: hidden;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--Textos2);
+    background-color: #4d2a1b;
+    height: 8vh;
+    padding: 0 25px;
+}
+  /* .logo {
+        font-size: 1;
+        letter-spacing: 1px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    } */
+.logo {
+    padding: 0px;
+    font-family: var(--Titulos);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #F8ECD8;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+
+    color: #F8ECD8;
+    font-size: 35px;
+    line-height: 1;
+
+    display: inline-block;
+    white-space: nowrap;
+    text-transform: none;
+    letter-spacing: normal;
+
+    font-feature-settings: 'liga';
+    
+}
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #F8ECD8;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    /* transition: 0.3s;
+    padding: 15px;
+    
+    border-radius: 10px; */
+}
+.menu:hover {
+    /* opacity: .7; */
+    /*text-decoration: underline;
+     text-underline-offset: 8px;
+    text-decoration-color: #F8ECD8; */
+    transition-duration: 1s;
+    background-color: var(--Leather-Brown);
+    border-radius: 10px;
+}
+
+/* LINKS DO MENU */
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.nav-list li {
+    letter-spacing: 2px;
+    margin-left: 32px;
+    /* display: flex;
+    align-items: center; */
+}
+
+.nav-list .menu {
+    font-family: var(--Textos);
+    font-size: 18px;
+    
+}
+/* BOTÃO HAMBÚRGUER */
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background-color: #F8ECD8;
+    margin: 8px;
+    transition: 0.3s;
+}
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+h1 {
+    text-transform: uppercase;
+    font-family: var(--Titulos);
+    font-size: 3em;
+    background: linear-gradient(to bottom,#F8ECD8 0%,#E2B96F 45%,#C99A50 75%,#70452D 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+#hero {
+    text-align: center;
+    height: 700px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-image:linear-gradient(to bottom,
+    transparent 10%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo11.jpg");
+    background-size: 190.4%;
+    background-attachment: fixed;
+    background-position: 60% top;
+    background-repeat: no-repeat;
+    color: #a75f08;
+}
+h2 {
+    font-family: var(--Titulos);
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--Deep-Brown);
+    font-weight: bolder;
+}
+#textopersonagem {
+    color: #422719;
+    font-family: var(--Textos2);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 550;
+}
+#textohero {
+    width: 80%;
+    margin: 20px 0px;
+    font-size: 20px;
+    font-family: var(--Textos2);
+    font-weight: 500;
+    color: var(--Light-Cream);
+}
+#botaohero {
+    padding: 5px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    font-weight: 530;
+    font-family: var(--Textos2);
+    color: var(--Leather-Brown);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    background-color: var(--Parchment);
+    border-radius: 5px;
+}
+#setahero {
+    color: var(--Leather-Brown);
+}
+ .icone-cta {
+    font-size: 28px;
+    line-height: 1;
+    color: var(--Leather-Brown);
+}
+.ornamento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 300px;
+    margin: 5px auto 10px auto;
+}
+
+.ornamento::before, .ornamento::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--Antique-Gold);
+}
+
+.ornamento span {
+    color: var(--Antique-Gold);
+    font-size: 18px;
+}
+.carousel {
+    width: 100%;
+    overflow-x: auto;
+    margin: 3em auto;
+    display: flex;
+    gap: 1em;
+    scroll-behavior: smooth;
+    anchor-name: --carousel;
+    scroll-snap-type: x mandatory;
+    scroll-marker-group: after;
+}
+.carousel::scroll-marker-group {
+    display: flex;
+    justify-content: center;
+    gap: .5em;
+}
+.card::scroll-marker {
+    content: '';
+    height: 1em;
+    width: 1em;
+    background-color: #E2B96F;
+    border-radius: 50%;
+
+}
+.card::scroll-marker:target-current {
+    background-color: var(--Muted-Red);
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+.carousel::scroll-button(right), .carousel::scroll-button(left) {
+    content: '⭢';
+    border: none;
+    background-color: var(--Muted-Red);
+    font-size: 1.5rem;
+    color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    padding-bottom: .1em;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --carousel;
+    position-area: right center;
+    translate: -50%;
+}
+.carousel::scroll-button(left) {
+    content: '⭠';
+    position-area: left center;
+    translate: 50%;
+}
+.carousel::scroll-button(right):disabled, .carousel::scroll-button(left):disabled {
+    opacity: 0.5;
+    cursor: auto;
+}
+.card {
+    scroll-snap-align: start;
+    flex: 0 0 25em;
+    aspect-ratio: 5 / 3;
+    background-color: #a75f08;
+    padding: 1em;
+    border-radius: .5em;
+    text-align: center;
+    align-content: center;
+}
+#cardholo {
+    background-image:linear-gradient(to bottom,
+    transparent 40%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo19.jpg");
+    background-size: 100%;
+    background-position: 50% 95% ;
+    background-repeat: no-repeat;
+}
+#cardholo h3 {
+    font-size: 1.9em;
+    margin-top: 150px;
+    font-family: var(--Titulos);
+    color: var(--Parchment);
+}
+#cardholo a {
+    font-size: 1.4em;
+    color: var(--Parchment);
+    font-family: var(--Textos2);
+}
+#cardlawrence {
+    background-image:linear-gradient(to bottom,
+    transparent 20%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/lawrence1.jpg");
+    background-size: 100%;
+    background-position: 90% 70%;
+}
+#cardlawrence h3 {
+    font-size: 1.9em;
+    margin-top: 150px;
+    font-family: var(--Titulos);
+    color: var(--Parchment);
+}
+#cardlawrence a {
+    font-size: 1.4em;
+    color: var(--Parchment);
+    font-family: var(--Textos2);
+}
+#cardnora {
+    background-image:linear-gradient(to bottom,
+    transparent 20%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/nora1.jpg");
+    background-size: 100%;
+    background-position: 50% 50% ;
+}
+#cardnora h3 {
+    font-size: 1.9em;
+    margin-top: 150px;
+    font-family: var(--Titulos);
+    color: var(--Parchment);
+}
+#cardnora a {
+    font-size: 1.4em;
+    color: var(--Parchment);
+    font-family: var(--Textos2);
+}
+#carddian {
+    background-image:linear-gradient(to bottom,
+    transparent 30%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/dian3.jpg");
+    background-size: 100%;
+    background-position: 50% 55% ;
+}
+#carddian h3 {
+    font-size: 1.9em;
+    margin-top: 150px;
+    font-family: var(--Titulos);
+    color: var(--Parchment);
+}
+#carddian a {
+    font-size: 1.4em;
+    color: var(--Parchment);
+    font-family: var(--Textos2);
+}
+#cardmarlheit {
+    background-image:linear-gradient(to bottom,
+    transparent 10%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/marlheit1.jpg");
+    background-size: 100%;
+    background-position: 50% 55% ;
+}
+#cardmarlheit h3 {
+    font-size: 1.9em;
+    margin-top: 150px;
+    font-family: var(--Titulos);
+    color: var(--Parchment);
+}
+#cardmarlheit a {
+    font-size: 1.4em;
+    color: var(--Parchment);
+    font-family: var(--Textos2);
+}
+#simbolo {
+      color: var(--Parchment);
+}
+main {
+    background-color: var(--Light-Cream);
+    height: 1200px;
+}
+
+.personagem-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    font-family: var(--Textos2);
+    font-size: 1.1em;
+    color: var(--Deep-Brown);
+    text-decoration: none;
+}
+.icone-personagem {
+    font-size: 24px;
+    color: var(--Deep-Brown);
+}
+
+
+
+main {
+    background-color: var(--Parchment);
+    height: 1200px;
+}
+
+.personagens {
+    position: relative;
+    background-color: var(--Light-Cream);
+    padding: 35px 0;
+    margin: 25px 0;
+}
+
+/* BORDA SUPERIOR E INFERIOR */
+
+.personagens::before,
+.personagens::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background-color: var(--Light-Cream);
+    z-index: 0;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 60%,
+        90% 100%,
+        80% 60%,
+        70% 100%,
+        60% 60%,
+        50% 100%,
+        40% 60%,
+        30% 100%,
+        20% 60%,
+        10% 100%,
+        0 60%
+    );
+}
+
+.personagens::before {
+    top: -24px;
+}
+
+.personagens::after {
+    bottom: -24px;
+    transform: rotate(180deg);
+}
+
+/* MANTÉM O CONTEÚDO ACIMA DAS BORDAS */
+
+.personagens > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 500px){
+    .card {
+        flex: 0 0 100%;
+    }
+}
+/* TABLETS E CELULARES */
+@media (max-width: 992px) {
+
+    nav {
+        width: 100%;
+        min-height: 65px;
+        height: auto;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    .mobile-menu {
+        display: block;
+        order: 2;
+        z-index: 1001;
+    }
+    .logo {
+        order: 1;
+    }
+   .nav-list {
+    position: fixed;
+
+    top: 65px;
+    right: 0;
+
+    width: min(75vw, 320px);
+    height: calc(100vh - 65px);
+
+    background-color: #4d2a1b;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* gap: 120px; */
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+
+    z-index: 1000;
+}
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .nav-list .menu {
+        font-size: 22px;
+    }
+
+    /* MENU ABERTO */
+    .nav-list.active {
+        transform: translateX(0);
+    }
+}
+
+/* ANIMAÇÃO DOS LINKS */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
-   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home,person,public,photo_library,menu_book,chevron_right&display=block">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-         <span class="material-symbols-outlined" onclick="clickMenu()">menu
-        </span>
-        <h1>Spice and Wolf</h1>
-        <nav id="itens">
-            <ul>
+         <!-- <span class="material-symbols-outlined" onclick="clickMenu()">menu
+        </span> -->
+     
+        <nav>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <a  class="logo" href="">Spice and Wolf</a>
+            <ul class="nav-list">
                 <li>
-                    <a href="">Início</a>
+                    <a class="menu" href="">
+                    <span class="material-symbols-outlined">home</span>
+                    <span>Início</span></a>
                 </li>
+
                 <li>
-                    <a href="">Personagens</a>
+                    <a class="menu" href="">
+                    <span class="material-symbols-outlined">person</span>
+                    <span>Personagens</span>
+                    </a>
                 </li>
+
                 <li>
-                    <a href="">Mundo</a>
+                  <a class="menu" href="">
+                    <span class="material-symbols-outlined">public</span>
+                    <span>Mundo</span>
+                    </a>
                 </li>
+
                 <li>
-                    <a href="">Galeria </a>
+                   <a class="menu" href="">
+                    <span class="material-symbols-outlined">photo_library</span>
+                    <span>Galeria</span>
+                    </a>
                 </li>
-                <li><a href="">Sobre</a></li>
+
+                 <li>
+                   <a class="menu" href="">
+                    <span class="material-symbols-outlined">menu_book</span>
+                    <span>Sobre</span>
+                    </a>
+                </li>
             </ul>
         </nav>
-    </header>
-    <script>
+    </header>  
+    <main>
+        <section id="hero" >
+            <h1>Spice and <br> Wolf</h1>
+                <p id="textohero">Conheça a trama que é movida por economia, negociações comerciais, táticas de mercado, câmbio de moedas e barganhas.</p>
+                <div class="ornamento">
+                <span>✥</span>
+                </div>
+                <a href="" id="botaohero">Conheça o anime<span id="setahero" class="material-symbols-outlined icone-cta">chevron_right
+                </span></a>
+        </section>
+        <h2>Personagens</h2>
+        <p id="textopersonagem" >Conheça os protagonistas desta jornada</p>
+        <section class="carousel borda-irregular">
+            <!-- <div id="cardholo" class="card">
+                <h3>HOLO</h3>
+                <p>A loba sábia de Yoitsu</p>
+            </div>  -->
+
+                <div id="cardholo" class="card">
+                    <h3>HOLO</h3>
+                    <a href="" class="personagem-link">A loba sábia de Yoitsu
+
+                    <span id="simbolo" class="material-symbols-outlined icone-personagem">chevron_right
+                    </span>
+                    </a>
+                </div>
+                
+                <div id="cardlawrence" class="card">
+                    <h3>LAWRENCE</h3>
+                    <a href="" class="personagem-link">O mercador
+                    
+                    <span id="simbolo" class="material-symbols-outlined icone-personagem">chevron_right
+                    </span>
+                    </a>
+                </div>
+
+                <div id="cardnora" class="card">
+                    <h3>NORA</h3>
+                    <a href="" class="personagem-link">A pastora
+                    
+                    <span id="simbolo" class="material-symbols-outlined icone-personagem">chevron_right
+                    </span>
+                    </a>
+                </div>
+
+                <div id="carddian" class="card">
+                    <h3>DIAN RUBENS</h3>
+                    <a href="" class="personagem-link">A pastora
+                    
+                    <span id="simbolo" class="material-symbols-outlined icone-personagem">chevron_right
+                    </span>
+                    </a>
+                </div>
+
+                <div id="cardmarlheit" class="card">
+                    <h3>RICHTEN MARLHEI</h3>
+                    <a href="" class="personagem-link">O comerciante
+                    
+                    <span id="simbolo" class="material-symbols-outlined icone-personagem">chevron_right
+                    </span>
+                    </a>
+                </div>
+
+
+
+
+<!-- 
+            <div id="cardlawrence" class="card">
+                <h3>LAWRENCE</h3>
+                <p>O mercador</p>
+            </div>
+
+            <div id="cardnora" class="card">
+                <h3>NORA</h3>
+                <p>A pastora</p>
+            </div>
+
+            <div id="carddian" class="card">
+                <h3>DIAN RUBENS</h3>
+                <p>A alquimista</p>
+            </div>
+
+            <div id="cardmarlheit" class="card">
+                <h3>RICHTEN MARLHEI</h3>
+                <p>O comerciante</p>
+            </div> -->
+        </section>
+    </main>
+    <!-- <script>
         function clickMenu() {
             if (itens.style.display == 'block') {
                itens.style.display = 'none' 
@@ -39,90 +773,8 @@
                 itens.style.display = 'block'
             }
         }
-    </script>
+    </script> -->
+    <!-- <script src="carousel.js"></script> -->
+    <script src="mobile-navbar.js"></script>
 </body>
 </html>
-
-
-
-
-
-@charset "UTF-8";
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
-
-:root {
-
-/* CORES PRINCIPAIS */
-    --Dark-Wood: #2B180F;
-    --Deep-Brown: #422719;
-    --Leather-Brown: #70452D;
-    --Warm-Brown: #986744;
-
-/* COR FUNDOS */
-    --Dark-Parchment: #CBA77C;
-    --Parchment: #E8CBA2;
-    --Light-Cream: #F2DFC0;
-    --Soft-Ivory: #F8ECD8;
-
-/* DETALHES E DESTAQUES */
-    --Antique-Gold: #C99A50;
-    --Wheat-Gold: #E2B96F;
-    --Muted-Red: #963F32;
-    --Olive-Green: #777347;
-
-/* FONTES */
-    --Titulos: 'Cinzel Decorative', serif;
-    --Textos: 'Cormorant Garamond', serif;
-    --Textos2: 'Cardo', serif;
-}
-
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-h1 {
-    font-family: var(--Titulos);
-    color: white;
-
-}
-span {
-    color: white;
-    display: block;
-    padding: 10px;
-    cursor: pointer;
-}
-
-header {
-    background-color: #5c3623;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-flow: row-reverse ;
-    padding: 20px;
-}
-header a {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-}
-header a:hover {
-    text-decoration: underline;
-    text-underline-offset: 8px;
-    text-decoration-color: white;
-}
-nav {
-    display: none;
-}
-nav ul{
-    display: flex;
-    gap: 25px;
-    list-style: none;
-}
-
-
