@@ -418,12 +418,9 @@ main {
     font-size: 24px;
     color: var(--Deep-Brown);
 }
-
-
-
 main {
     background-color: var(--Parchment);
-    height: 1200px;
+    height: 2000px;
 }
 
 .personagens {
@@ -432,6 +429,51 @@ main {
     padding: 35px 0;
     margin: 25px 0;
 }
+
+.cenario {
+    position: relative;
+    border: 2px solid var(--Antique-Gold);
+    padding: 8px;
+}
+
+/* Detalhes dos cantos */
+.cenario::before,
+.cenario::after {
+    content: "✧";
+    position: absolute;
+    color: var(--Antique-Gold);
+    font-size: 25px;
+}
+
+.cenario::before {
+    top: -13px;
+    left: -10px;
+}
+
+.cenario::after {
+    bottom: -13px;
+    right: -10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
