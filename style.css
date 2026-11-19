@@ -174,9 +174,9 @@ h1 {
     transparent 10%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo11.jpg");
     /* background-position: 70% 10%;
     background-repeat: no-repeat; */
-    background-size: 161.8%;
+    background-size: 190.4%;
     background-attachment: fixed;
-    background-position: 70% top;
+    background-position: 60% top;
     background-repeat: no-repeat;
     color: #a75f08;
 }
