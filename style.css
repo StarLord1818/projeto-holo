@@ -440,7 +440,7 @@ main {
 }
 main {
     background-color: var(--Parchment);
-    height: 3000px;
+    height: 4000px;
 }
 
 .personagens {
@@ -608,12 +608,21 @@ main {
     position: relative;
     overflow: hidden;
     isolation: isolate;
-
     height: 300px;
     width: 90%;
     margin: 25px auto;
-
     background-color: var(--Muted-Red);
+    border-radius: 10px;
+}
+#imagem3 {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    height: 500px;
+    width: 90%;
+    margin: 25px auto;
+    background-color: var(--Muted-Red);
+    border-radius: 10px;
 }
 
 /* Imagem de fundo da primeira div */
@@ -637,7 +646,7 @@ main {
     position: absolute;
     inset: -15% 0;
 
-    background-image: url("Imagens/landscape12.jpg");
+    background-image: url("Imagens/landscape1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -645,100 +654,138 @@ main {
     transform: translateY(var(--parallax-y, 0px));
     z-index: -1;
 }
-
-    /* background-color: var(--Leather-Brown);
-    text-align: center;
-    font-size: 1.5em;
-
-    padding: 10px;
-    color: var(--Parchment);
-    text-decoration: none;
-    border-radius: 10px; */
-
-
-/* #mundo {
-    /box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.514);
-    background-image:linear-gradient(to top,
-    transparent 10%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/landscape11.jpg");
-    background-position: 90% 90%;
-    background-size: 110%;
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-color: red;
-    height: 450px;
-    width: 90%;
-    display: block;
-    margin: auto;
-}
-#mundo p {
-    color: var(--Leather-Brown);
-    text-align: center;
-    margin-top: 70px;
-    font-size: 2em;
-    font-weight: bolder;
-    font-family: var(--Textos2);
-}
-#mundo h2 {
-    color: var(--Parchment);
-    background-color: var(--Leather-Brown);
-}
-#linkcenario {
-    text-align: center;
-    padding: 5px;
-    font-size: 1.5em;
-    font-weight: 530;
-    font-family: var(--Textos2);
-    color: var(--Parchment);
-    text-decoration: none;
-    background-color: var(--Leather-Brown);
-    border-radius: 5px;
-}
-#cardtexto {
-    background-color: var(--Muted-Red);
-    width: 90%;
-    display: block;
-    margin: auto;
+#imagem3::before {
+    content: "";
+    position: absolute;
+    inset: -15% 0;
     
+    background-image: url("Imagens/landscape10.jpg");
+    background-size: 105%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: translateY(var(--parallax-y, 0px));
+    z-index: -1;
 }
-#cardtexto p {
+#fotos {
+    background-color: var(--Muted-Red);
+    width: 96%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px 0px;
+    margin-top: 10px;
+    box-shadow: inset 2px 2px 12px 2px rgba(0, 0, 0, 0.507);
+}
+#textoholo {
     color: var(--Parchment);
-} */
+    width: 90%;
+    margin: 20px auto 0px auto;
+    font-size: 2em;
+    font-weight: 600;
+    font-family: var(--Textos2);
+    background-color: var(--Olive-Green);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
 
+    position: relative;
+    width: 90%;
+    max-width: 650px;
+    margin: 30px auto;
 
+    padding: 30px 20px;
+    background-color: var(--Olive-Green);
+    border: 2px solid var(--Antique-Gold);
+    border-radius: 5px;
 
+    box-shadow: 0 5px 12px rgba(43, 24, 15, 0.15);
+}
+#textoholo::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
 
+    border: 1px solid var(--Wheat-Gold);
+    pointer-events: none;
+}
+#textoholo h3 {
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 
+    width: 45%;
+    margin: 15px auto;
 
+    font-family: var(--Textos);
+    color: var(--Parchment);
+    font-size: .7em;
+}
 
+#textoholo h3::before,
+#textoholo h3::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--Antique-Gold);
+}
+.rotulo-galeria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 
+    width: 80%;
+    max-width: 350px;
+    margin: 20px auto 0px auto;
 
+    color: var(--Deep-Brown);
+    font-family: var(--Textos2);
+    font-size: 1.2em;
+}
+#momentos {
+    padding-top: 15px;
+    color: var(--Deep-Brown);
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+}
+.galeria {
+    margin: 100px auto;
+    width: 90%;
+    border: 5px solid red;
+    display: flex;
+    overflow-x: auto;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+.galeria::-webkit-scrollbar {
+    display: none;
+}
+ .group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 5s infinite linear;
+    padding-right: 1em;
+ }
+ .cardgaleria {
+    flex: 0 0 5em;
+    height: 5em;
+    padding: 1em;
+    background-color: var(--Muted-Red);
+    font-size: 3rem;
+    border-radius: .2em;
+    text-align: center;
+    align-content: center;
+ }
+ @keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+ }
 
 
 
