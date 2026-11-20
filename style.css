@@ -450,14 +450,108 @@ main {
     margin: 25px 0;
 }
 #mundo {
-    /* box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.514);
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2em;
+}
+
+#textomundo {
+    /* background-color: var(--Olive-Green);  */
+    color: var(--Deep-Brown);
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+    /* border-radius: 10px;
+    padding: 10px; */
+    
+}
+.cabecalho-mundo {
+    text-align: center;
+    padding: 30px 15px;
+}
+
+/* RÓTULO O MUNDO */
+
+.rotulo-mundo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: 80%;
+    max-width: 350px;
+    margin: auto;
+
+    color: var(--Deep-Brown);
+    font-family: var(--Textos2);
+    font-size: 1.2em;
+}
+
+.linha {
+    flex: 1;
+    height: 1px;
+    background-color: var(--Antique-Gold);
+}
+
+.losango {
+    color: var(--Antique-Gold);
+    font-size: 20px;
+}
+#historias {
+    font-family: var(--Titulos);
+    color: var(--Deep-Brown);
+    font-size: 2em;
+    margin: 15px 0;
+}
+.ornamento-mundo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 65%;
+    max-width: 250px;
+    margin: 15px auto 0px auto;
+}
+
+.ornamento-mundo::before,
+.ornamento-mundo::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--Antique-Gold);
+}
+
+.ornamento-mundo span {
+    color: var(--Antique-Gold);
+    font-size: 22px;
+    margin: 0 8px;
+}
+#cenarios {
+    background-color: var(--Leather-Brown);
+    text-align: center;
+    font-size: 1.5em;
+
+    padding: 10px;
+    color: var(--Parchment);
+    text-decoration: none;
+    border-radius: 10px;
+
+}
+/* #mundo {
+    /box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.514);
     background-image:linear-gradient(to top,
     transparent 10%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/landscape11.jpg");
     background-position: 90% 90%;
     background-size: 110%;
     background-repeat: no-repeat;
-    background-attachment: fixed; */
-    height: 600px;
+    background-attachment: fixed; 
+    background-color: red;
+    height: 450px;
+    width: 90%;
+    display: block;
+    margin: auto;
 }
 #mundo p {
     color: var(--Leather-Brown);
@@ -471,7 +565,7 @@ main {
     color: var(--Parchment);
     background-color: var(--Leather-Brown);
 }
-#mundo a {
+#linkcenario {
     text-align: center;
     padding: 5px;
     font-size: 1.5em;
@@ -482,7 +576,16 @@ main {
     background-color: var(--Leather-Brown);
     border-radius: 5px;
 }
-
+#cardtexto {
+    background-color: var(--Muted-Red);
+    width: 90%;
+    display: block;
+    margin: auto;
+    
+}
+#cardtexto p {
+    color: var(--Parchment);
+} */
 
 
 
