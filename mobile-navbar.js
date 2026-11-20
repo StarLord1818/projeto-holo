@@ -44,3 +44,39 @@ const mobileNavbar = new MobileNavbar (
 );
 
 mobileNavbar.init();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const imagensParallax = document.querySelectorAll("#imagem1, #imagem2");
+
+function atualizarParallax() {
+    imagensParallax.forEach(imagem => {
+        const posicao = imagem.getBoundingClientRect();
+
+        // Distância do centro da imagem até o centro da tela
+        const distancia = posicao.top + posicao.height / 2 - window.innerHeight / 2;
+
+        // Limita o movimento da imagem
+        const movimento = Math.max(-40, Math.min(40, distancia * -0.12));
+
+        imagem.style.setProperty("--parallax-y", `${movimento}px`);
+    });
+}
+
+window.addEventListener("scroll", atualizarParallax);
+window.addEventListener("resize", atualizarParallax);
+
+atualizarParallax();

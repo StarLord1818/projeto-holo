@@ -420,7 +420,7 @@ h2 {
 }
 main {
     background-color: var(--Light-Cream);
-    height: 1200px;
+    
 }
 
 .personagem-link {
@@ -440,7 +440,7 @@ main {
 }
 main {
     background-color: var(--Parchment);
-    height: 2000px;
+    height: 3000px;
 }
 
 .personagens {
@@ -529,16 +529,156 @@ main {
     margin: 0 8px;
 }
 #cenarios {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: fit-content;
+    margin: 25px auto 0;
+
     background-color: var(--Leather-Brown);
+    text-align: center;
+    font-size: 1.5em;
+    padding: 10px;
+
+    color: var(--Parchment);
+    text-decoration: none;
+    border-radius: 10px;
+}
+.icone-cenario {
+    color: var(--Parchment);
+    font-size: 28px;
+    line-height: 1;
+}
+#cenarios {
+    position: relative;
+    border: 2px solid var(--Antique-Gold);
+    padding: 8px;
+}
+#cenarios {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: fit-content;
+    margin: 30px auto;
+    padding: 12px 22px;
+
+    background-color: var(--Deep-Brown);
+    color: var(--Parchment);
+
+    font-family: var(--Textos2);
+    font-size: 1.3em;
+    text-decoration: none;
+    border: 2px double var(--Antique-Gold);
+
+    outline-offset: 4px;
+    transition: .3s ease;
+}
+
+/* Setinha */
+
+.icone-cenario {
+    color: var(--Parchment);
+    font-size: 25px;
+    line-height: 1;
+}
+#cenarios:hover {
+    background-color: var(--Leather-Brown);
+    
+    box-shadow: 0 5px 12px rgba(43, 24, 15, 0.25);
+    border-color: var(--Wheat-Gold);
+}
+#cenarios:hover .icone-cenario {
+    transform: translateX(4px);
+}
+
+.icone-cenario {
+    color: var(--Parchment);
+    font-size: 25px;
+    line-height: 1;
+    transition: transform .3s ease;
+}
+/* #imagem1 {
+    background-color: var(--Muted-Red);
+    height: 300px;
+    width: 90%;
+    margin: auto;
+    background-image: url("Imagens/landscape3.jpg");
+    background-repeat: no-repeat;
+    background-position:50% bottom ;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+#imagem2 {
+    background-color: var(--Muted-Red);
+    height: 300px;
+    width: 90%;
+    margin: 25px auto 40px auto;
+    background-image: url("Imagens/landscape12.jpg");
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: contain;
+    background-attachment: fixed;
+} */
+
+#imagem1,
+#imagem2 {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
+    height: 300px;
+    width: 90%;
+    margin: 25px auto;
+
+    background-color: var(--Muted-Red);
+}
+
+/* Imagem de fundo da primeira div */
+#imagem1::before {
+    content: "";
+    position: absolute;
+    inset: -15% 0;
+
+    background-image: url("Imagens/landscape3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: translateY(var(--parallax-y, 0px));
+    z-index: -1;
+}
+
+/* Imagem de fundo da segunda div */
+#imagem2::before {
+    content: "";
+    position: absolute;
+    inset: -15% 0;
+
+    background-image: url("Imagens/landscape12.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: translateY(var(--parallax-y, 0px));
+    z-index: -1;
+}
+
+    /* background-color: var(--Leather-Brown);
     text-align: center;
     font-size: 1.5em;
 
     padding: 10px;
     color: var(--Parchment);
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 10px; */
 
-}
+
 /* #mundo {
     /box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.514);
     background-image:linear-gradient(to top,
@@ -586,6 +726,16 @@ main {
 #cardtexto p {
     color: var(--Parchment);
 } */
+
+
+
+
+
+
+
+
+
+
 
 
 
