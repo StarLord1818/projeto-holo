@@ -603,29 +603,6 @@ main {
     line-height: 1;
     transition: transform .3s ease;
 }
-/* #imagem1 {
-    background-color: var(--Muted-Red);
-    height: 300px;
-    width: 90%;
-    margin: auto;
-    background-image: url("Imagens/landscape3.jpg");
-    background-repeat: no-repeat;
-    background-position:50% bottom ;
-    background-size: 100%;
-    background-attachment: fixed;
-}
-#imagem2 {
-    background-color: var(--Muted-Red);
-    height: 300px;
-    width: 90%;
-    margin: 25px auto 40px auto;
-    background-image: url("Imagens/landscape12.jpg");
-    background-repeat: no-repeat;
-    background-position: center ;
-    background-size: contain;
-    background-attachment: fixed;
-} */
-
 #imagem1,
 #imagem2 {
     position: relative;
