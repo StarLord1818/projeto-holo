@@ -666,6 +666,7 @@ main {
 
     transform: translateY(var(--parallax-y, 0px));
     z-index: -1;
+    /* border-radius: inherit; */
 }
 #fotos {
     background-color: var(--Muted-Red);
