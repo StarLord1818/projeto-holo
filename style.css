@@ -224,6 +224,27 @@ h2 {
     line-height: 1;
     color: var(--Leather-Brown);
 }
+.cenario {
+    position: relative;
+    border: 2px solid var(--Antique-Gold);
+    padding: 8px;
+}
+.cenario::before,
+.cenario::after {
+    content: "✧";
+    position: absolute;
+    color: var(--Antique-Gold);
+    font-size: 25px;
+}
+
+.cenario::before {
+    top: -13px;
+    left: -10px;
+}
+.cenario::after {
+    bottom: -13px;
+    right: -10px;
+}
 .ornamento {
     display: flex;
     align-items: center;
@@ -232,7 +253,6 @@ h2 {
     width: 300px;
     margin: 5px auto 10px auto;
 }
-
 .ornamento::before, .ornamento::after {
     content: "";
     flex: 1;
@@ -429,40 +449,39 @@ main {
     padding: 35px 0;
     margin: 25px 0;
 }
-
-.cenario {
-    position: relative;
-    border: 2px solid var(--Antique-Gold);
-    padding: 8px;
+#mundo {
+    /* box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.514);
+    background-image:linear-gradient(to top,
+    transparent 10%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/landscape11.jpg");
+    background-position: 90% 90%;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+    height: 600px;
 }
-
-/* Detalhes dos cantos */
-.cenario::before,
-.cenario::after {
-    content: "✧";
-    position: absolute;
-    color: var(--Antique-Gold);
-    font-size: 25px;
+#mundo p {
+    color: var(--Leather-Brown);
+    text-align: center;
+    margin-top: 70px;
+    font-size: 2em;
+    font-weight: bolder;
+    font-family: var(--Textos2);
 }
-
-.cenario::before {
-    top: -13px;
-    left: -10px;
+#mundo h2 {
+    color: var(--Parchment);
+    background-color: var(--Leather-Brown);
 }
-
-.cenario::after {
-    bottom: -13px;
-    right: -10px;
+#mundo a {
+    text-align: center;
+    padding: 5px;
+    font-size: 1.5em;
+    font-weight: 530;
+    font-family: var(--Textos2);
+    color: var(--Parchment);
+    text-decoration: none;
+    background-color: var(--Leather-Brown);
+    border-radius: 5px;
 }
-
-
-
-
-
-
-
-
-
 
 
 
