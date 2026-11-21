@@ -309,7 +309,7 @@ h2 {
 .carousel::scroll-button(left):disabled {
     opacity: 0.5;
     cursor: auto;
-}
+}   
 /* .carousel::scroll-button(right), .carousel::scroll-button(left) {
     content: '⭢';
     border: none;
@@ -450,7 +450,7 @@ h2 {
 }
 main {
     background-color: var(--Parchment);
-    height: 4000px;
+    height: 4500px;
     border-radius: 10px 10px 0px 0px;
 }
 .personagens {
