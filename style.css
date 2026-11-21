@@ -272,22 +272,21 @@ h2 {
 }
 .carousel::scroll-button(right),
 .carousel::scroll-button(left) {
-    content: "arrow_forward_ios";
-
     font-family: 'Material Symbols Outlined';
     font-feature-settings: 'liga';
-    font-size: 20px;
+    font-size: 22px;
     font-weight: normal;
+    line-height: 1;
 
     display: grid;
     place-items: center;
 
     width: 46px;
     height: 46px;
+    padding: 0;
 
     border: none;
     border-radius: 50%;
-
     background-color: var(--Muted-Red);
     color: var(--Parchment);
 
@@ -295,21 +294,18 @@ h2 {
 
     position: fixed;
     position-anchor: --carousel;
-    position-area: right center;
-    translate: -50%;
 }
-
+.carousel::scroll-button(right) {
+    content: "arrow_forward_ios";
+    position-area: right center;
+    translate: -50% 0;
+}
 .carousel::scroll-button(left) {
     content: "arrow_back_ios";
     position-area: left center;
-    translate: 50%;
+    translate: 50% 0;
+    text-indent: 6px;
 }
-
-.carousel::scroll-button(right):disabled,
-.carousel::scroll-button(left):disabled {
-    opacity: 0.5;
-    cursor: auto;
-}   
 /* .carousel::scroll-button(right), .carousel::scroll-button(left) {
     content: '⭢';
     border: none;
