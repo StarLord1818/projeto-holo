@@ -611,7 +611,7 @@ main {
     position: absolute;
     inset: -15% 0;
     background-image: url("Imagens/landscape3.jpg");
-    background-size: cover;
+    background-size: 100%;
     background-position: 80%;
     background-repeat: no-repeat;
     transform: translateY(var(--parallax-y, 0px));
