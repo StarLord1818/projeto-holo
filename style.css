@@ -820,11 +820,12 @@ footer {
     background-color: var(--Leather-Brown);
     padding: 30px;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.712);
+    text-align: center;
 }
 footer a{
     padding: 0px;
     font-family: var(--Titulos);
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 3px;
