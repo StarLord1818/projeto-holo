@@ -36,7 +36,6 @@
 }
 
 
-
 body {
     width: 100%;
     overflow-x: clip;
@@ -142,7 +141,7 @@ h1 {
     justify-content: flex-end;
     align-items: center;
     background-image:linear-gradient(to bottom,
-    transparent 10%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo11.jpg");
+    transparent 5%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo11\(2\).jpg");
     background-size: 190.4%;
     background-attachment: fixed;
     background-position: 60% top;
@@ -820,13 +819,27 @@ footer p {
         transform: translateX(-100%);
     }
  }
+
+ /* ANIMAÇÃO DOS LINKS */
+
+ @keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 @media (max-width: 500px){
     .card {
         flex: 0 0 100%;
     }
 }
 
-/* TABLETS E CELULARES */
+/* CELULARES E TABLET */
 
 @media (max-width: 992px) {
 
@@ -850,50 +863,52 @@ footer p {
     }
    .nav-list {
     position: fixed;
-
     top: 65px;
     right: 0;
-
     width: min(75vw, 320px);
     height: calc(100vh - 65px);
-
     background-color: #4d2a1b;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    /* gap: 120px; */
-
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
-
     z-index: 1000;
-}
+    }
     .nav-list li {
         margin-left: 0;
         opacity: 0;
     }
-
     .nav-list .menu {
         font-size: 22px;
     }
-
-    /* MENU ABERTO */
     .nav-list.active {
         transform: translateX(0);
     }
 }
-
-/* ANIMAÇÃO DOS LINKS */
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
+@media screen and (min-width: 922px) and (max-width: 1200px) {
+    
+}
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: var(--Deep-Brown);
     }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
+    header {
+        width: 90%;
+        margin: auto;
+        
+    }
+    .logo {
+        font-size: 2.6em;
+    }
+    #hero {
+        background-image: url("Imagens/landscape5.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    main {
+        width: 90%;
+        margin: auto;
     }
 }
