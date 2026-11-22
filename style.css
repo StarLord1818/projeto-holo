@@ -771,8 +771,8 @@ main {
 }
 footer {
     background-color: var(--Leather-Brown);
-    padding: 30px;
-    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.712);
+    padding: 35px;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.712);
     text-align: center;
 }
 footer a{
@@ -791,11 +791,6 @@ footer a{
     height: 1px;
     background-color: var(--Parchment);
     margin: 20px auto;
-}
-footer {
-    background-color: var(--Leather-Brown);
-    padding: 20px 15px;
-    text-align: center;
 }
 footer a {
     display: block;
@@ -892,23 +887,107 @@ footer p {
 }
 @media screen and (min-width: 1200px) {
     body {
-        background-color: var(--Deep-Brown);
+        background-color: #70452D;
     }
     header {
-        width: 90%;
+        width: 80%;
         margin: auto;
         
     }
     .logo {
-        font-size: 2.6em;
+        font-size: 2.8em;
     }
     #hero {
-        background-image: url("Imagens/landscape5.jpg");
-        background-size: cover;
+        /* background-image: url("Imagens/landscape5.jpg"); */
+        background-size: 80%;
         background-position: center;
     }
+    #hero span {
+
+    }
+    #hero  h1 {
+        font-size: 4em;
+    }
+    #textohero {
+        font-size: 2em;
+    }
+    #botaohero {
+        font-size: 2em;
+        padding: 8px;
+        margin-bottom: 20px;
+    }
     main {
-        width: 90%;
+        width: 80%;
         margin: auto;
+    }
+    h2 {
+        font-size: 3em;
+    }
+    #textopersonagem {
+        font-size: 2em;
+       
+    }
+    .card::scroll-marker {
+        display: none;
+    }
+    .rotulo-mundo {
+        font-size: 2em;
+    }
+    #historias {
+        font-size: 3em;
+    }
+    .carousel {
+        width: 80%;
+    }
+    #textomundo {
+        font-size: 2em;
+        font-weight: 540;
+    }
+    #fotos {
+        width: 80%;
+    }
+    #cenarios {
+        font-size: 2em;
+    }
+    #imagem1, 
+    #imagem2, 
+    #imagem3 {
+        width: 80%;
+    }
+    #imagem1::before {
+        background-image: url("Imagens/landscape3\(2\).jpg");
+    }
+    #imagem2::before {
+        background-image: url("Imagens/landscape1\(2\).jpg");
+    }
+    .rotulo-galeria {
+        font-size: 2em;
+    }
+    #momentos {
+        font-size: 2em;
+        font-weight: 540;
+    }
+    .galeria {
+        width: 80%;
+    }
+    #linkgaleria {
+        font-size: 2em;
+    }
+    #textoholo {
+        font-size: 3em;
+    }
+    footer {
+        width: 80%;
+        margin: auto;
+        text-align: left;
+    }
+    footer a {
+        font-size: 3em;
+    }
+    footer p {
+        font-size: 1.5em;
+    }
+    br {
+        display: none;
     }
 }
