@@ -874,7 +874,8 @@ footer p {
     }
 }
 
-/* TABLET / MONITORES */
+/* TABLET / MONITORES */    
+
 
 @media screen and (min-width: 922px) and (max-width: 1200px) {
 
@@ -882,13 +883,39 @@ footer p {
         /* background-color: #70452D; */
         background-color: red;
     }
+    /* .nav-list {
+       
+    }
+    .material-symbols-outlined {
+        display: none;
+    }
+    .nav-list li {
+        margin: 0px;
+       
+    }
+    .nav-list .menu {
+        font-size: 1em;
+        
+    } */
+
+
+
+
+
+
+
+
+
+
+
+    
     header {
         width: 80%;
         margin: auto;
     
     }
     .logo {
-        font-size: 2.5em;
+        font-size: 2.3em;
     }
     #hero {
         /* background-image: url("Imagens/landscape5.jpg"); */
@@ -973,7 +1000,7 @@ footer p {
         padding: 0px;
     }
     footer a {
-        font-size: 2.5em;
+        font-size: 2.3em;
         font-weight: 530;
     }
     .footer-conteudo {
