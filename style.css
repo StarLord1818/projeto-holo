@@ -877,7 +877,7 @@ footer p {
 /* TABLET / MONITORES */    
 
 
-@media screen and (min-width: 922px) and (max-width: 1200px) {
+@media screen and (min-width: 992px) and (max-width: 1200px) {
 
     body {
         /* background-color: #70452D; */
@@ -897,25 +897,24 @@ footer p {
         font-size: 1em;
         
     } */
-
-
-
-
-
-
-
-
-
-
-
-    
+    .nav-list li {
+        margin: 0px 0px 0px 5px;
+        padding: 0px;
+    }
+     .nav-list .menu {
+        font-size: 1.1em;
+        
+    }
+    .material-symbols-outlined {
+        display: none;
+    }
     header {
-        width: 80%;
+        width: 90%;
         margin: auto;
     
     }
     .logo {
-        font-size: 2.3em;
+        font-size: 2em;
     }
     #hero {
         /* background-image: url("Imagens/landscape5.jpg"); */
@@ -934,7 +933,7 @@ footer p {
         margin-bottom: 20px;
     }
     main {
-        width: 80%;
+        width: 90%;
         margin: auto;
     }
     h2 {
@@ -964,12 +963,12 @@ footer p {
         font-size: 1.7em;
     }
     #fotos {
-        width: 80%;
+        width: 90%;
     }
     #imagem1, 
     #imagem2, 
     #imagem3 {
-        width: 80%;
+        width: 90%;
     }
     #imagem1::before {
         background-image: url("Imagens/landscape3\(2\).jpg");
@@ -985,7 +984,7 @@ footer p {
         font-weight: 540;
     }
     .galeria {
-        width: 80%;
+        width: 90%;
     }
     #linkgaleria {
         font-size: 1.7em;
@@ -995,7 +994,7 @@ footer p {
     }
     footer {
         display: block;
-        width: 80%;
+        width: 90%;
         margin: auto;
         padding: 0px;
     }
@@ -1031,15 +1030,26 @@ footer p {
         background-color: #70452D;
     }
     header {
-        width: 80%;
+        width: 90%;
         margin: auto;
     }
     .logo {
         font-size: 2.6em;
     }
+    .nav-list li {
+        margin: 0px 0px 0px 5px;
+        padding: 0px;
+    }
+     .nav-list .menu {
+        font-size: 1.4em;
+    }
+    .material-symbols-outlined {
+        display: none;
+    }
+    
     #hero {
         /* background-image: url("Imagens/landscape5.jpg"); */
-        background-size: 80%;
+        background-size: 90%;
         background-position: center;
     }
     #hero  h1 {
@@ -1054,7 +1064,7 @@ footer p {
         margin-bottom: 20px;
     }
     main {
-        width: 80%;
+        width: 90%;
         margin: auto;
     }
     h2 {
@@ -1074,14 +1084,14 @@ footer p {
         font-size: 3em;
     }
     .carousel {
-        width: 80%;
+        width: 90%;
     }
     #textomundo {
         font-size: 2em;
         font-weight: 540;
     }
     #fotos {
-        width: 80%;
+        width: 90%;
     }
     #cenarios {
         font-size: 2em;
