@@ -880,29 +880,15 @@ footer p {
 @media screen and (min-width: 992px) and (max-width: 1200px) {
 
     body {
-        /* background-color: #70452D; */
-        background-color: red;
-    }
-    /* .nav-list {
-       
-    }
-    .material-symbols-outlined {
-        display: none;
+        background-color: #70452D; 
     }
     .nav-list li {
         margin: 0px;
-       
-    }
-    .nav-list .menu {
-        font-size: 1em;
-        
-    } */
-    .nav-list li {
-        margin: 0px 0px 0px 5px;
         padding: 0px;
+        /*  margin-left: 0; */
     }
      .nav-list .menu {
-        font-size: 1.1em;
+        font-size: 1.2m;
         
     }
     .material-symbols-outlined {
@@ -914,7 +900,7 @@ footer p {
     
     }
     .logo {
-        font-size: 2em;
+        font-size: 2.2em;
     }
     #hero {
         /* background-image: url("Imagens/landscape5.jpg"); */
@@ -1030,18 +1016,18 @@ footer p {
         background-color: #70452D;
     }
     header {
-        width: 90%;
+        width: 80%;
         margin: auto;
     }
     .logo {
-        font-size: 2.6em;
+        font-size: 2.3em;
     }
     .nav-list li {
         margin: 0px 0px 0px 5px;
         padding: 0px;
     }
      .nav-list .menu {
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
     .material-symbols-outlined {
         display: none;
@@ -1064,7 +1050,7 @@ footer p {
         margin-bottom: 20px;
     }
     main {
-        width: 90%;
+        width: 80%;
         margin: auto;
     }
     h2 {
@@ -1084,14 +1070,14 @@ footer p {
         font-size: 3em;
     }
     .carousel {
-        width: 90%;
+        width: 75%;
     }
     #textomundo {
         font-size: 2em;
         font-weight: 540;
     }
     #fotos {
-        width: 90%;
+        width: 80%;
     }
     #cenarios {
         font-size: 2em;
@@ -1151,4 +1137,19 @@ footer p {
         background-color: var(--Parchment);
         flex-shrink: 0;
     }
+    nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 45px;
+}
+.nav-list {
+    display: flex;
+    align-items: center;
+    
+}
+
+
+
 }
