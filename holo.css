@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,0..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    /* CORES PRINCIPAIS */
+    --Dark-Wood: #2B180F;
+    --Deep-Brown: #422719;
+    --Leather-Brown: #70452D;
+    --Warm-Brown: #986744;
+
+    /* FUNDOS */
+    --Dark-Parchment: #CBA77C;
+    --Parchment: #E8CBA2;
+    --Light-Cream: #F2DFC0;
+    --Soft-Ivory: #F8ECD8;
+
+    /* DETALHES */
+    --Antique-Gold: #C99A50;
+    --Wheat-Gold: #E2B96F;
+    --Muted-Red: #963F32;
+    --Olive-Green: #777347;
+
+    /* FONTES */
+    --Titulos: 'Cinzel Decorative', serif;
+    --Textos: 'Cormorant Garamond', serif;
+    --Textos2: 'Cardo', serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    overflow-x: clip;
+}
+body.menu-open {
+    overflow: hidden;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--Textos2);
+    background-color: #4d2a1b;
+    height: 8vh;
+    padding: 0 25px;
+}
+.logo {
+    padding: 0px;
+    font-family: var(--Titulos);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #F8ECD8;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    color: #F8ECD8;
+    font-size: 35px;
+    line-height: 1;
+    display: inline-block;
+    white-space: nowrap;
+    text-transform: none;
+    letter-spacing: normal;
+    font-feature-settings: 'liga';
+}
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #F8ECD8;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+.menu:hover {
+    transition-duration: 1s;
+    background-color: var(--Leather-Brown);
+    border-radius: 10px;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.nav-list li {
+    letter-spacing: 2px;
+    margin-left: 32px;
+}
+.nav-list .menu {
+    font-family: var(--Textos);
+    font-size: 18px;
+}
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background-color: #F8ECD8;
+    margin: 8px;
+    transition: 0.3s;
+}
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+h1 {
+    text-transform: uppercase;
+    font-family: var(--Titulos);
+    font-size: 3em;
+    background: linear-gradient(to bottom,#F8ECD8 0%,#E2B96F 45%,#C99A50 75%,#70452D 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}

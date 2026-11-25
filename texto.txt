@@ -29,13 +29,12 @@
     --Textos: 'Cormorant Garamond', serif;
     --Textos2: 'Cardo', serif;
 }
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 body {
     width: 100%;
@@ -44,6 +43,9 @@ body {
 body.menu-open {
     overflow: hidden;
 }
+
+/* HEADER E MENU DE NAVEGAÇÃO */
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -53,12 +55,6 @@ nav {
     height: 8vh;
     padding: 0 25px;
 }
-  /* .logo {
-        font-size: 1;
-        letter-spacing: 1px;
-        white-space: nowrap;
-        flex-shrink: 0;
-    } */
 .logo {
     padding: 0px;
     font-family: var(--Titulos);
@@ -74,45 +70,30 @@ nav {
     font-family: 'Material Symbols Outlined';
     font-weight: normal;
     font-style: normal;
-
     color: #F8ECD8;
     font-size: 35px;
     line-height: 1;
-
     display: inline-block;
     white-space: nowrap;
     text-transform: none;
     letter-spacing: normal;
-
     font-feature-settings: 'liga';
-    
 }
 .menu {
     display: flex;
     align-items: center;
     gap: 8px;
-
     color: #F8ECD8;
     text-decoration: none;
     padding: 15px;
     border-radius: 10px;
     transition: background-color 0.3s;
-    /* transition: 0.3s;
-    padding: 15px;
-    
-    border-radius: 10px; */
 }
 .menu:hover {
-    /* opacity: .7; */
-    /*text-decoration: underline;
-     text-underline-offset: 8px;
-    text-decoration-color: #F8ECD8; */
     transition-duration: 1s;
     background-color: var(--Leather-Brown);
     border-radius: 10px;
 }
-
-/* LINKS DO MENU */
 .nav-list {
     list-style: none;
     display: flex;
@@ -121,21 +102,15 @@ nav {
 .nav-list li {
     letter-spacing: 2px;
     margin-left: 32px;
-    /* display: flex;
-    align-items: center; */
 }
-
 .nav-list .menu {
     font-family: var(--Textos);
     font-size: 18px;
-    
 }
-/* BOTÃO HAMBÚRGUER */
 .mobile-menu {
     display: none;
     cursor: pointer;
 }
-
 .mobile-menu div {
     width: 32px;
     height: 2px;
@@ -146,11 +121,9 @@ nav {
 .mobile-menu.active .line1 {
     transform: rotate(-45deg) translate(-8px, 8px);
 }
-
 .mobile-menu.active .line2 {
     opacity: 0;
 }
-
 .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
 }
@@ -171,7 +144,7 @@ h1 {
     justify-content: flex-end;
     align-items: center;
     background-image:linear-gradient(to bottom,
-    transparent 10%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo11.jpg");
+    transparent 5%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo11\(2\).jpg");
     background-size: 190.4%;
     background-attachment: fixed;
     background-position: 60% top;
@@ -224,6 +197,26 @@ h2 {
     line-height: 1;
     color: var(--Leather-Brown);
 }
+.cenario {
+    position: relative;
+    border: 2px solid var(--Antique-Gold);
+    padding: 8px;
+}
+.cenario::before,
+.cenario::after {
+    content: "✧";
+    position: absolute;
+    color: var(--Antique-Gold);
+    font-size: 25px;
+}
+.cenario::before {
+    top: -13px;
+    left: -10px;
+}
+.cenario::after {
+    bottom: -13px;
+    right: -10px;
+}
 .ornamento {
     display: flex;
     align-items: center;
@@ -232,14 +225,12 @@ h2 {
     width: 300px;
     margin: 5px auto 10px auto;
 }
-
 .ornamento::before, .ornamento::after {
     content: "";
     flex: 1;
     height: 1px;
     background-color: var(--Antique-Gold);
 }
-
 .ornamento span {
     color: var(--Antique-Gold);
     font-size: 18px;
@@ -266,7 +257,6 @@ h2 {
     width: 1em;
     background-color: #E2B96F;
     border-radius: 50%;
-
 }
 .card::scroll-marker:target-current {
     background-color: var(--Muted-Red);
@@ -274,30 +264,36 @@ h2 {
 .carousel::-webkit-scrollbar {
     display: none;
 }
-.carousel::scroll-button(right), .carousel::scroll-button(left) {
-    content: '⭢';
+.carousel::scroll-button(right),
+.carousel::scroll-button(left) {
+    font-family: 'Material Symbols Outlined';
+    font-feature-settings: 'liga';
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    padding: 0;
     border: none;
-    background-color: var(--Muted-Red);
-    font-size: 1.5rem;
-    color: white;
-    height: 60px;
-    width: 60px;
     border-radius: 50%;
-    padding-bottom: .1em;
+    background-color: var(--Muted-Red);
+    color: var(--Parchment);
     cursor: pointer;
     position: fixed;
     position-anchor: --carousel;
+}
+.carousel::scroll-button(right) {
+    content: "arrow_forward_ios";
     position-area: right center;
-    translate: -50%;
+    translate: -50% 0;
 }
 .carousel::scroll-button(left) {
-    content: '⭠';
+    content: "arrow_back_ios";
     position-area: left center;
-    translate: 50%;
-}
-.carousel::scroll-button(right):disabled, .carousel::scroll-button(left):disabled {
-    opacity: 0.5;
-    cursor: auto;
+    translate: 50% 0;
+    text-indent: 6px;
 }
 .card {
     scroll-snap-align: start;
@@ -398,17 +394,11 @@ h2 {
 #simbolo {
       color: var(--Parchment);
 }
-main {
-    background-color: var(--Light-Cream);
-    height: 1200px;
-}
-
 .personagem-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
-
     font-family: var(--Textos2);
     font-size: 1.1em;
     color: var(--Deep-Brown);
@@ -418,90 +408,428 @@ main {
     font-size: 24px;
     color: var(--Deep-Brown);
 }
-
-
-
 main {
     background-color: var(--Parchment);
-    height: 1200px;
+    border-radius: 10px 10px 0px 0px;
+    display: flow-root;
 }
-
 .personagens {
     position: relative;
     background-color: var(--Light-Cream);
     padding: 35px 0;
     margin: 25px 0;
 }
-
-/* BORDA SUPERIOR E INFERIOR */
-
-.personagens::before,
-.personagens::after {
+#mundo {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2em;
+}
+#textomundo {
+    color: var(--Deep-Brown);
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+}
+.cabecalho-mundo {
+    text-align: center;
+    padding: 30px 15px;
+}
+.rotulo-mundo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 80%;
+    max-width: 350px;
+    margin: auto;
+    color: var(--Deep-Brown);
+    font-family: var(--Textos2);
+    font-size: 1.2em;
+}
+.linha {
+    flex: 1;
+    height: 1px;
+    background-color: var(--Antique-Gold);
+}
+.losango {
+    color: var(--Antique-Gold);
+    font-size: 20px;
+}
+#historias {
+    font-family: var(--Titulos);
+    color: var(--Deep-Brown);
+    font-size: 2em;
+    margin: 15px 0;
+}
+.ornamento-mundo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    max-width: 250px;
+    margin: 15px auto 0px auto;
+}
+.ornamento-mundo::before,
+.ornamento-mundo::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--Antique-Gold);
+}
+.ornamento-mundo span {
+    color: var(--Antique-Gold);
+    font-size: 22px;
+    margin: 0 8px;
+}
+#cenarios {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: fit-content;
+    margin: 25px auto 0;
+    background-color: var(--Leather-Brown);
+    text-align: center;
+    font-size: 1.5em;
+    padding: 10px;
+    color: var(--Parchment);
+    text-decoration: none;
+    border-radius: 10px;
+}
+.icone-cenario {
+    color: var(--Parchment);
+    font-size: 28px;
+    line-height: 1;
+}
+#cenarios {
+    position: relative;
+    border: 2px solid var(--Antique-Gold);
+    padding: 8px;
+}
+#cenarios {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: fit-content;
+    margin: 30px auto;
+    padding: 12px 22px;
+    background-color: var(--Deep-Brown);
+    color: var(--Parchment);
+    font-family: var(--Textos2);
+    font-size: 1.3em;
+    text-decoration: none;
+    border: 2px double var(--Antique-Gold);
+    outline-offset: 4px;
+    transition: .3s ease;
+}
+.icone-cenario {
+    color: var(--Parchment);
+    font-size: 25px;
+    line-height: 1;
+}
+#cenarios:hover {
+    background-color: var(--Leather-Brown);
+    box-shadow: 0 5px 12px rgba(43, 24, 15, 0.25);
+    border-color: var(--Wheat-Gold);
+}
+#cenarios:hover .icone-cenario {
+    transform: translateX(4px);
+}
+.icone-cenario {
+    color: var(--Parchment);
+    font-size: 25px;
+    line-height: 1;
+    transition: transform .3s ease;
+}
+#imagem1,
+#imagem2 {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    height: 300px;
+    width: 90%;
+    margin: 25px auto;
+    background-color: var(--Muted-Red);
+    border-radius: 10px;
+}
+#imagem3 {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    height: 500px;
+    width: 90%;
+    margin: 25px auto;
+    background-color: var(--Muted-Red);
+    border-radius: 10px;
+}
+#imagem1::before {
     content: "";
     position: absolute;
-    left: 0;
-    width: 100%;
-    height: 25px;
-    background-color: var(--Light-Cream);
-    z-index: 0;
-
-    clip-path: polygon(
-        0 0,
-        100% 0,
-        100% 60%,
-        90% 100%,
-        80% 60%,
-        70% 100%,
-        60% 60%,
-        50% 100%,
-        40% 60%,
-        30% 100%,
-        20% 60%,
-        10% 100%,
-        0 60%
-    );
+    inset: -15% 0;
+    background-image: url("Imagens/landscape3.jpg");
+    background-size: cover;
+    background-position: 80%;
+    background-repeat: no-repeat;
+    transform: translateY(var(--parallax-y, 0px));
+    z-index: -1;
 }
-
-.personagens::before {
-    top: -24px;
+#imagem2::before {
+    content: "";
+    position: absolute;
+    inset: -15% 0;
+    background-image: url("Imagens/landscape1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(var(--parallax-y, 0px));
+    z-index: -1;
 }
-
-.personagens::after {
-    bottom: -24px;
-    transform: rotate(180deg);
+#imagem3::before {
+    content: "";
+    position: absolute;
+    inset: -15% 0;
+    background-image: url("Imagens/landscape11.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    transform: translateY(var(--parallax-y, 0px));
+    z-index: -1;
+    border-radius: inherit;
 }
-
-/* MANTÉM O CONTEÚDO ACIMA DAS BORDAS */
-
-.personagens > * {
+#fotos {
+    background-color: var(--Muted-Red);
+    width: 96%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px 0px;
+    margin-top: 10px;
+    box-shadow: inset 2px 2px 12px 2px rgba(0, 0, 0, 0.507);
+}
+#textoholo {
+    color: var(--Parchment);
+    width: 90%;
+    margin: 20px auto 0px auto;
+    font-size: 2em;
+    font-weight: 600;
+    font-family: var(--Textos2);
+    background-color: var(--Olive-Green);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
     position: relative;
-    z-index: 1;
+    width: 90%;
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 30px 20px;
+    background-color: var(--Olive-Green);
+    border: 2px solid var(--Antique-Gold);
+    border-radius: 5px;
+    box-shadow: 0 5px 12px rgba(43, 24, 15, 0.15);
 }
+#textoholo::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 1px solid var(--Wheat-Gold);
+    pointer-events: none;
+}
+#textoholo h3 {
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 45%;
+    margin: 15px auto;
+    font-family: var(--Textos);
+    color: var(--Parchment);
+    font-size: .7em;
+}
+#textoholo h3::before,
+#textoholo h3::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--Antique-Gold);
+}
+.rotulo-galeria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 80%;
+    max-width: 350px;
+    margin: 20px auto 0px auto;
+    color: var(--Deep-Brown);
+    font-family: var(--Textos2);
+    font-size: 1.2em;
+}
+#momentos {
+    padding-top: 15px;
+    color: var(--Deep-Brown);
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+}
+.galeria {
+    margin: 50px auto;
+    width: 90%;
+    display: flex;
+    overflow-x: hidden;
+}
+.galeria::-webkit-scrollbar {
+    display: none;
+}
+ .group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 20s infinite linear;
+    padding-right: 1em;
+    flex-shrink: 0;
+    width: max-content;
+ }
+ .cardgaleria {
+    flex: 0 0 5em;
+    height: 5em;
+    padding: 1em;
+    background-color: var(--Muted-Red);
+    font-size: 3rem;
+    border-radius: .2em;
+    text-align: center;
+    align-content: center;
+    background-repeat: no-repeat;
+ }
+ .foto1{
+    background-image: url("Imagens/nora8.jpg");
+    background-size: 100%;
+ }
+ .foto2{
+    background-image: url("Imagens/holo16.jpg");
+    background-size: 100%;
+ }
+ .foto3{
+    background-image: url("Imagens/lawrence3.jpg");
+    background-size: 100%;
+ }
+ .foto4{
+    background-image: url("Imagens/landscape10.jpg");
+    background-size: 100%;
+ }
+ .foto5{
+    background-image: url("Imagens/dian8.jpg");
+    background-size: 100%;
+ }
+ .foto6{
+    background-image: url("Imagens/holo4.jpg");
+    background-size: 100%;
+ }
+ #linkgaleria {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: fit-content;
+    margin: 30px auto;
+    padding: 12px 22px;
+    background-color: var(--Deep-Brown);
+    color: var(--Parchment);
+    font-family: var(--Textos2);
+    font-size: 1.3em;
+    text-decoration: none;
+    border: 2px double var(--Antique-Gold);
+    border-radius: 10px;
+    transition: .3s ease;
+}
+#linkgaleria::before,
+#linkgaleria::after {
+    content: "✧";
+    position: absolute;
+    color: var(--Antique-Gold);
+    font-size: 25px;
+}
+#linkgaleria::before {
+    top: -13px;
+    left: -10px;
+}
+#linkgaleria::after {
+    bottom: -13px;
+    right: -10px;
+}
+#linkgaleria:hover {
+    background-color: var(--Leather-Brown);
+    box-shadow: 0 5px 12px rgba(43, 24, 15, 0.25);
+    border-color: var(--Antique-Gold);
+}
+#linkgaleria:hover .icone-cenario {
+    transform: translateX(4px);
+}
+footer {
+    background-color: var(--Leather-Brown);
+    padding: 35px;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.712);
+    text-align: center;
+}
+.linha-footer {
+    width: 190px;
+    height: 1px;
+    background-color: var(--Parchment);
+    margin: 20px auto;
+}
+footer a {
+    display: block;
+    font-family: var(--Titulos);
+    font-size: 2em;
+    font-weight: 550;
+    color: var(--Deep-Brown);
+    text-decoration: none;
+    line-height: 1.3;
+    color: var(--Parchment);
+    
+}
+footer p {
+    font-family: var(--Textos2);
+    font-size: 1em;
+    color: var(--Parchment);
+}
+ @keyframes spin {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+ }
 
+ /* ANIMAÇÃO DOS LINKS */
 
+ @keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 @media (max-width: 500px){
     .card {
         flex: 0 0 100%;
     }
 }
-/* TABLETS E CELULARES */
+
+/* CELULARES E TABLET */
+
 @media (max-width: 992px) {
 
     nav {
@@ -524,257 +852,307 @@ main {
     }
    .nav-list {
     position: fixed;
-
     top: 65px;
     right: 0;
-
     width: min(75vw, 320px);
     height: calc(100vh - 65px);
-
     background-color: #4d2a1b;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    /* gap: 120px; */
-
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
-
     z-index: 1000;
-}
+    }
     .nav-list li {
         margin-left: 0;
         opacity: 0;
     }
-
     .nav-list .menu {
         font-size: 22px;
     }
-
-    /* MENU ABERTO */
     .nav-list.active {
         transform: translateX(0);
     }
 }
 
-/* ANIMAÇÃO DOS LINKS */
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
+/* TABLET / MONITORES */    
 
-    to {
-        opacity: 1;
-        transform: translateX(0);
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+    body {
+        background-color: #70452D; 
     }
+    .nav-list li {
+        margin: 0px;
+        padding: 0px;
+        /*  margin-left: 0; */
+    }
+     .nav-list .menu {
+        font-size: 1.2m;
+        
+    }
+    .material-symbols-outlined {
+        display: none;
+    }
+    header {
+        width: 90%;
+        margin: auto;
+    
+    }
+    .logo {
+        font-size: 2.2em;
+    }
+    #hero {
+        /* background-image: url("Imagens/landscape5.jpg"); */
+        background-size: 105%;
+        background-position: center;
+    }
+    #hero  h1 {
+        font-size: 3.5em;
+    }
+    #textohero {
+        font-size: 1.6em;
+    }
+    #botaohero {
+        font-size: 1.7em;
+        padding: 8px;
+        margin-bottom: 20px;
+    }
+    main {
+        width: 90%;
+        margin: auto;
+    }
+    h2 {
+        font-size: 2.7em;
+    }
+    #textopersonagem {
+        font-size: 1.8em;
+       
+    }
+    .card::scroll-marker {
+        display: none;
+    }
+    .rotulo-mundo {
+        font-size: 1.8em;
+    }
+    #historias {
+        font-size: 2.7em;
+    }
+    .carousel {
+        width: 80%;
+    }
+    #textomundo {
+        font-size: 1.8em;
+        font-weight: 540;
+    }
+    #cenarios {
+        font-size: 1.7em;
+    }
+    #fotos {
+        width: 90%;
+    }
+    #imagem1, 
+    #imagem2, 
+    #imagem3 {
+        width: 90%;
+    }
+    #imagem1::before {
+        background-image: url("Imagens/landscape3\(2\).jpg");
+    }
+    #imagem2::before {
+        background-image: url("Imagens/landscape1\(2\).jpg");
+    }
+    .rotulo-galeria {
+        font-size: 1.8em;
+    }
+    #momentos {
+        font-size: 2em;
+        font-weight: 540;
+    }
+    .galeria {
+        width: 90%;
+    }
+    #linkgaleria {
+        font-size: 1.7em;
+    }
+    #textoholo {
+        font-size: 2.5em;
+    }
+    footer {
+        display: block;
+        width: 90%;
+        margin: auto;
+        padding: 0px;
+    }
+    footer a {
+        font-size: 2.3em;
+        font-weight: 530;
+    }
+    .footer-conteudo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 70px;
+
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .footer-texto {
+        font-size: 1.2em;
+    }
+    .linha-footer {
+        width: 2px;
+        height: 100px;
+        background-color: var(--Parchment);
+        flex-shrink: 0;
+    }
+    
+}
+
+/* TELAS MAIORES */
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: #70452D;
+    }
+    header {
+        width: 80%;
+        margin: auto;
+    }
+    .logo {
+        font-size: 2.3em;
+    }
+    .nav-list li {
+        margin: 0px 0px 0px 5px;
+        padding: 0px;
+    }
+     .nav-list .menu {
+        font-size: 1.2em;
+    }
+    .material-symbols-outlined {
+        display: none;
+    }
+    
+    #hero {
+        /* background-image: url("Imagens/landscape5.jpg"); */
+        background-size: 90%;
+        background-position: center;
+    }
+    #hero  h1 {
+        font-size: 4em;
+    }
+    #textohero {
+        font-size: 2em;
+    }
+    #botaohero {
+        font-size: 2em;
+        padding: 8px;
+        margin-bottom: 20px;
+    }
+    main {
+        width: 80%;
+        margin: auto;
+    }
+    h2 {
+        font-size: 3em;
+    }
+    #textopersonagem {
+        font-size: 2em;
+       
+    }
+    .card::scroll-marker {
+        display: none;
+    }
+    .rotulo-mundo {
+        font-size: 2em;
+    }
+    #historias {
+        font-size: 3em;
+    }
+    .carousel {
+        width: 75%;
+    }
+    #textomundo {
+        font-size: 2em;
+        font-weight: 540;
+    }
+    #fotos {
+        width: 80%;
+    }
+    #cenarios {
+        font-size: 2em;
+    }
+    #imagem1, 
+    #imagem2, 
+    #imagem3 {
+        width: 80%;
+    }
+    #imagem1::before {
+        background-image: url("Imagens/landscape3\(2\).jpg");
+    }
+    #imagem2::before {
+        background-image: url("Imagens/landscape1\(2\).jpg");
+    }
+    .rotulo-galeria {
+        font-size: 2em;
+    }
+    #momentos {
+        font-size: 2em;
+        font-weight: 540;
+    }
+    .galeria {
+        width: 80%;
+    }
+    #linkgaleria {
+        font-size: 2em;
+    }
+    #textoholo {
+        font-size: 3em;
+    }
+    footer {
+        display: block;
+        width: 80%;
+        margin: auto;
+        padding: 0px;
+    }
+    footer a {
+        font-size: 3em;
+        font-weight: 530;
+    }
+    .footer-conteudo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 70px;
+
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .footer-texto {
+        font-size: 1.2em;
+    }
+    .linha-footer {
+        width: 2px;
+        height: 100px;
+        background-color: var(--Parchment);
+        flex-shrink: 0;
+    }
+    nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 45px;
+}
+.nav-list {
+    display: flex;
+    align-items: center;
+    
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home,person,public,photo_library,menu_book,chevron_right&display=block">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-         <!-- <span class="material-symbols-outlined" onclick="clickMenu()">menu
-        </span> -->
-     
-        <nav>
-            <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-            <a  class="logo" href="">Spice and Wolf</a>
-            <ul class="nav-list">
-                <li>
-                    <a class="menu" href="">
-                    <span class="material-symbols-outlined">home</span>
-                    <span>Início</span></a>
-                </li>
-
-                <li>
-                    <a class="menu" href="">
-                    <span class="material-symbols-outlined">person</span>
-                    <span>Personagens</span>
-                    </a>
-                </li>
-
-                <li>
-                  <a class="menu" href="">
-                    <span class="material-symbols-outlined">public</span>
-                    <span>Mundo</span>
-                    </a>
-                </li>
-
-                <li>
-                   <a class="menu" href="">
-                    <span class="material-symbols-outlined">photo_library</span>
-                    <span>Galeria</span>
-                    </a>
-                </li>
-
-                 <li>
-                   <a class="menu" href="">
-                    <span class="material-symbols-outlined">menu_book</span>
-                    <span>Sobre</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>  
-    <main>
-        <section id="hero" >
-            <h1>Spice and <br> Wolf</h1>
-                <p id="textohero">Conheça a trama que é movida por economia, negociações comerciais, táticas de mercado, câmbio de moedas e barganhas.</p>
-                <div class="ornamento">
-                <span>✥</span>
-                </div>
-                <a href="" id="botaohero">Conheça o anime<span id="setahero" class="material-symbols-outlined icone-cta">chevron_right
-                </span></a>
-        </section>
-        <h2>Personagens</h2>
-        <p id="textopersonagem" >Conheça os protagonistas desta jornada</p>
-        <section class="carousel borda-irregular">
-            <!-- <div id="cardholo" class="card">
-                <h3>HOLO</h3>
-                <p>A loba sábia de Yoitsu</p>
-            </div>  -->
-
-                <div id="cardholo" class="card">
-                    <h3>HOLO</h3>
-                    <a href="" class="personagem-link">A loba sábia de Yoitsu
-
-                    <span id="simbolo" class="material-symbols-outlined icone-personagem">chevron_right
-                    </span>
-                    </a>
-                </div>
-                
-                <div id="cardlawrence" class="card">
-                    <h3>LAWRENCE</h3>
-                    <a href="" class="personagem-link">O mercador
-                    
-                    <span id="simbolo" class="material-symbols-outlined icone-personagem">chevron_right
-                    </span>
-                    </a>
-                </div>
-
-                <div id="cardnora" class="card">
-                    <h3>NORA</h3>
-                    <a href="" class="personagem-link">A pastora
-                    
-                    <span id="simbolo" class="material-symbols-outlined icone-personagem">chevron_right
-                    </span>
-                    </a>
-                </div>
-
-                <div id="carddian" class="card">
-                    <h3>DIAN RUBENS</h3>
-                    <a href="" class="personagem-link">A pastora
-                    
-                    <span id="simbolo" class="material-symbols-outlined icone-personagem">chevron_right
-                    </span>
-                    </a>
-                </div>
-
-                <div id="cardmarlheit" class="card">
-                    <h3>RICHTEN MARLHEI</h3>
-                    <a href="" class="personagem-link">O comerciante
-                    
-                    <span id="simbolo" class="material-symbols-outlined icone-personagem">chevron_right
-                    </span>
-                    </a>
-                </div>
-
-
-
-
-<!-- 
-            <div id="cardlawrence" class="card">
-                <h3>LAWRENCE</h3>
-                <p>O mercador</p>
-            </div>
-
-            <div id="cardnora" class="card">
-                <h3>NORA</h3>
-                <p>A pastora</p>
-            </div>
-
-            <div id="carddian" class="card">
-                <h3>DIAN RUBENS</h3>
-                <p>A alquimista</p>
-            </div>
-
-            <div id="cardmarlheit" class="card">
-                <h3>RICHTEN MARLHEI</h3>
-                <p>O comerciante</p>
-            </div> -->
-        </section>
-    </main>
-    <!-- <script>
-        function clickMenu() {
-            if (itens.style.display == 'block') {
-               itens.style.display = 'none' 
-            } else {
-                itens.style.display = 'block'
-            }
-        }
-    </script> -->
-    <!-- <script src="carousel.js"></script> -->
-    <script src="mobile-navbar.js"></script>
-</body>
-</html>
+}
