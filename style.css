@@ -796,12 +796,6 @@ footer p {
     background-color: var(--Parchment);
     margin: 20px auto;
 }
-/* 
-=============================
-        FIM DO FOOTER 
-=============================
-
-*/
  @keyframes spin {
     from {
         transform: translateX(0);
@@ -908,7 +902,6 @@ footer p {
         font-size: 2.2em;
     }
     #hero {
-        /* background-image: url("Imagens/landscape5.jpg"); */
         background-size: 105%;
         background-position: center;
     }
