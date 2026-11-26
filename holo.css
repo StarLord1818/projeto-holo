@@ -142,7 +142,7 @@ main {
      background-image:linear-gradient(to left,
     transparent 5%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo20.png");
     background-color: var(--Muted-Red);
-    background-size: 165%;
+    background-size: 175%;
     background-position: center;
     background-repeat: no-repeat;
     height: 400px;
@@ -164,18 +164,46 @@ main {
 #texto1 {
     background-color: var(--Muted-Red);
     width: 97%;
-    margin: auto;
+    margin: 0px auto 10px auto;
     border-radius: 10px;
+    
 }
 #texto1 p {
     padding: 20px;
     margin: 10px auto 0px auto;
-    
     text-align: center;
     font-size: 1.7em;
     font-weight: bolder;
     color: var(--Parchment);
     font-family: var(--Textos2);
+}
+.holo {
+    background-color: var(--Muted-Red);
+    height: 500px;
+    width: 95%;
+    margin:auto;
+    border-radius: 10px;
+}
+.holo  h2 {
+    text-align: center;
+    padding: 10px;
+    font-size: 2em;
+    color: var(--Parchment);
+}
+#imagemholo {
+    background-image: url("Imagens/holo14.jpg");
+    background-size: cover;
+    background-position: ;
+    background-repeat: no-repeat;
+    margin: auto;
+    width: 90%;
+    height: 300px;
+    border-radius: 10px;
+}
+.holo p {
+    color: var(--Parchment);
+    width: 90%;
+    margin: auto;
 }
 
 
