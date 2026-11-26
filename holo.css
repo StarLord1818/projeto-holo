@@ -142,7 +142,7 @@ main {
      background-image:linear-gradient(to left,
     transparent 5%, rgba(43, 24, 15, 0.9) 100%),url("Imagens/holo20.png");
     background-color: var(--Muted-Red);
-    background-size: 175%;
+    background-size: 188%;
     background-position: center;
     background-repeat: no-repeat;
     height: 400px;
@@ -161,13 +161,14 @@ main {
     padding-left: 20px;
     margin: auto;
 }
-#texto1 {
-    background-color: var(--Muted-Red);
+
+/* #texto1 {
+    background-color: var(--Muted-Red) ;
     width: 97%;
     margin: 0px auto 10px auto;
     border-radius: 10px;
     
-}
+} 
 #texto1 p {
     padding: 20px;
     margin: 10px auto 0px auto;
@@ -177,11 +178,12 @@ main {
     color: var(--Parchment);
     font-family: var(--Textos2);
 }
+    */
 .holo {
-    background-color: var(--Muted-Red);
-    height: 500px;
+    background-color: var(--Olive-Green);
+    height: 600px;
     width: 95%;
-    margin:auto;
+    margin: 20px auto 0px auto;
     border-radius: 10px;
 }
 .holo  h2 {
@@ -191,20 +193,86 @@ main {
     color: var(--Parchment);
 }
 #imagemholo {
-    background-image: url("Imagens/holo14.jpg");
+    background-image: url("Imagens/holo2.jpg");
     background-size: cover;
-    background-position: ;
     background-repeat: no-repeat;
+    background-position: center calc(50% + var(--parallax-y, 0px));
     margin: auto;
     width: 90%;
     height: 300px;
     border-radius: 10px;
 }
 .holo p {
+    padding-top: 20px;
     color: var(--Parchment);
     width: 90%;
     margin: auto;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 545;
+    font-family: var(--Textos2);
 }
+.titulosh2 {
+    font-weight: bold;
+    font-size: 2.5em;
+    font-family: var(--Titulos);
+    text-align: center;
+    padding: 15px;
+    color: var(--Deep-Brown);
+}
+.personalidade {
+    background-color: var(--Leather-Brown
+    );
+    height: 600px;
+    flex-flow: column;
+    padding: 10px;
+    width: 95%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.603);
+}
+.personalidade > p {
+    padding: 20px;
+    text-align: center;
+    font-weight: 545;
+    font-size: 1.5em;
+    font-family: var(--Textos2);
+    color: var(--Parchment);
+   
+}
+.divpersonalidade {
+    border-radius: 10px;
+    background-image: url("Imagens/landscape9.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: var(--Deep-Brown);
+    height: 275px;
+    width: 100%;
+    margin: auto;
+    align-self: center;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
