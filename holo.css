@@ -203,7 +203,7 @@ main {
     border-radius: 10px;
 }
 .holo p {
-    padding-top: 20px;
+    padding: 20px 0px;
     color: var(--Parchment);
     width: 90%;
     margin: auto;
@@ -214,20 +214,44 @@ main {
 }
 .titulosh2 {
     font-weight: bold;
-    font-size: 2.5em;
-    font-family: var(--Titulos);
+    font-size: 1.7em;
+    font-family: var(--Textos2);
     text-align: center;
-    padding: 15px;
-    color: var(--Deep-Brown);
+    color: var(--Leather-Brown);
+    background-color: var(--Parchment);
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.568);
+}
+.cabecalho-secao {
+    width: 90%;
+    margin: 25px auto;
+    text-align: center;
+}
+.ornamento-inferior {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--Antique-Gold);
+    font-size: 20px;
+}
+
+.linha {
+    height: 1px;
+    background-color: var(--Antique-Gold);
+    flex: 1;
+    max-width: 100px;
 }
 .personalidade {
     background-color: var(--Leather-Brown
     );
-    height: 600px;
+    height: 715px;
     flex-flow: column;
     padding: 10px;
     width: 95%;
-    margin: auto;
+    margin: 20px auto;
     border-radius: 10px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.603);
 }
@@ -238,7 +262,6 @@ main {
     font-size: 1.5em;
     font-family: var(--Textos2);
     color: var(--Parchment);
-   
 }
 .divpersonalidade {
     border-radius: 10px;
@@ -249,9 +272,46 @@ main {
     height: 275px;
     width: 100%;
     margin: auto;
-    align-self: center;
-    
+    align-self: center; 
 }
+.imagemrelacoes {
+    background-image: url("Imagens/landscape18.png");
+    background-size: cover;
+    background-position: center calc(50% + var(--parallax-y, 0px));
+    background-repeat: no-repeat;
+    width: 99%;
+    height: 262px;
+    background-color:var(--Muted-Red);
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+.relacoes {
+    background-color: var(--Leather-Brown);
+    width: 95%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.616);
+}
+#textorelacoes {
+    background-color: var(--Parchment);
+    padding: 10px;
+    border-radius: 10px;
+}
+#textorelacoes > p {
+    color: var(--Leather-Brown);
+    font-size: 1.5em;
+    font-family: var(--Textos2);
+    font-weight: 570;
+    text-align: center;
+
+}
+
+
+
+
+
 
 
 

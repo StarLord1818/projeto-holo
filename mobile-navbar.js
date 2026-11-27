@@ -45,7 +45,7 @@ const mobileNavbar = new MobileNavbar (
 
 mobileNavbar.init();
 
-const imagensParallax = document.querySelectorAll("#imagem1, #imagem2, #imagem3, #imagemholo");
+const imagensParallax = document.querySelectorAll("#imagem1, #imagem2, #imagem3, #imagemholo, .imagemrelacoes");
 
 function atualizarParallax() {
     imagensParallax.forEach(imagem => {
