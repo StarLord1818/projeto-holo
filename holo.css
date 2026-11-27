@@ -181,7 +181,7 @@ main {
     */
 .holo {
     background-color: var(--Olive-Green);
-    height: 600px;
+    height: 690px;
     width: 95%;
     margin: 20px auto 0px auto;
     border-radius: 10px;
@@ -247,7 +247,7 @@ main {
 .personalidade {
     background-color: var(--Leather-Brown
     );
-    height: 715px;
+    height: 880px;
     flex-flow: column;
     padding: 10px;
     width: 95%;
@@ -277,11 +277,12 @@ main {
 }
 .imagemrelacoes {
     background-image: url("Imagens/landscape18.png");
-    background-size: cover;
-    background-position: center calc(50% + var(--parallax-y, 0px));
+    background-size: 155%;
+    background-position: center;
+    /* background-position: center calc(50% + var(--parallax-y, 0px)); */
     background-repeat: no-repeat;
     width: 99%;
-    height: 262px;
+    height: 333px;
     background-color:var(--Muted-Red);
     margin: auto;
     margin-bottom: 30px;
